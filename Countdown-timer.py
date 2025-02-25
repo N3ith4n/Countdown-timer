@@ -147,4 +147,4 @@ async def countdown(ctx):
 			await msg.delete()
 			break
 		
-bot.run('Nzk2MDM3MDQ0OTEyMzkwMTQ0.X_SFRQ.kK4QHTiyOU_AE0AWAFQLZu3wSKQ')
+bot.run('')
