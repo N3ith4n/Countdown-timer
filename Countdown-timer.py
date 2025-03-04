@@ -147,4 +147,4 @@ async def countdown(ctx):
 			await msg.delete()
 			break
 		
-bot.run('')
+bot.run('TOKEN')
