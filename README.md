@@ -1,6 +1,9 @@
 # Countdown-timer
 
-This is a **Discord bot** that provides a countdown to the release of **Honkai: Star Rail 3.1**. It updates the time remaining in different phases and announces the release when the countdown hits zero. (you can manually change the date)
+This is a **Discord bot** that provides a countdown to the release of **Honkai: Star Rail 3.1** (ofcs you can change what it countdowns to). It updates the time remaining in different phases and announces the release when the countdown hits zero. (you can manually change the date)
+
+NOTE:
+You have to change the date manually as I haven't added a command to change it automatically from discord
 
 ## Features
 ✅ **Live Countdown** – Displays the time left until release
@@ -8,33 +11,6 @@ This is a **Discord bot** that provides a countdown to the release of **Honkai: 
 ✅ **Final Announcement** – Alerts everyone when the update goes live
 ✅ **Cool Embed Messages** – Uses Discord embeds for a clean look
 
-## Requirements
-- Python 3.8 or newer
-- Discord bot token
-- Required Python libraries:
-  ```bash
-  pip install discord.py pytz
-  ```
-
-## How to Use
-1. **Clone this repo** (or copy the script)
-   ```bash
-   git clone https://github.com/yourusername/honkai-countdown-bot.git
-   cd honkai-countdown-bot
-   ```
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Set up your bot token**
-   - Go to the [Discord Developer Portal](https://discord.com/developers/applications)
-   - Create a bot and copy the token
-   - Replace `YOUR_BOT_TOKEN` in the script with your actual token
-
-4. **Run the bot**
-   ```bash
-   python bot.py
-   ```
 
 ## How It Works
 1. The bot starts by getting the **current time** and the **target release time**.
