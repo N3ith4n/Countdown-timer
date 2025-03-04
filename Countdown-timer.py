@@ -22,7 +22,7 @@ async def countdown(ctx):
 	while run:
 		#SET AND SEND FIRST MESSAGE#
 		now = datetime.now().astimezone(timezone("Asia/Manila"))
-		release = datetime(year=2025, month=2, day=26, hour=11, minute=0, second=0).astimezone(timezone("Asia/Manila"))
+		release = datetime(year=2025, month=3, day=4, hour=12, minute=0, second=0).astimezone(timezone("Asia/Manila"))
 		until_release = release - now
 		
 		embd = discord.Embed(title="", color=0xf0a5be)
