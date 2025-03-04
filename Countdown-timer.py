@@ -1,3 +1,4 @@
+#Imports & Setup
 from discord.ext import commands
 import asyncio
 import discord
@@ -6,25 +7,29 @@ from datetime import date
 from datetime import datetime
 from pytz import timezone
 
+#Bot Initialization
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!!", intents=intents)
 
 print("Requirments Met")
 
+#Bot Readiness
 @bot.event
 async def on_ready(pass_context=True):
 	print ('Ready')
-	
+
+#Countdown Command
 @bot.command(pass_context=True)
 async def countdown(ctx):
 	run = True
 	while run:
 		#SET AND SEND FIRST MESSAGE#
 		now = datetime.now().astimezone(timezone("Asia/Manila"))
-		release = datetime(year=2025, month=3, day=4, hour=12, minute=0, second=0).astimezone(timezone("Asia/Manila"))
+		release = datetime(year=2025, month=3, day=5, hour=14, minute=4, second=0).astimezone(timezone("Asia/Manila"))
 		until_release = release - now
-		
+
+		# Countdown Display
 		embd = discord.Embed(title="", color=0xf0a5be)
 		embd.insert_field_at(index=0, name="****", value=until_release)
 		msg = await ctx.send(embed=embd)
@@ -32,8 +37,9 @@ async def countdown(ctx):
 		
 		dot_count = 1
 		x = 0
-		#LOOP START#
+		#Dynamic Updates# #loop#
 		while True:
+			#when countdown reaches zero
 			if until_release.total_seconds() <= 0:
 				embd.remove_field(index=0)
 				embd = discord.Embed(title="**Welcome to Honkai: Star Rail 3.1, Trailblazers!**", description="The Astral Express wishes you good luck on your journey! ~☆", color=0xffffff)
@@ -102,7 +108,7 @@ async def countdown(ctx):
 						
 					elif dot_count == 3:
 						dot_count = 1
-						
+
 					total_seconds = int(until_release.total_seconds())  # Get total seconds
 					hours, remainder = divmod(total_seconds, 3600)
 					minutes, seconds = divmod(remainder, 60)
@@ -129,7 +135,8 @@ async def countdown(ctx):
 						
 					elif dot_count == 3:
 						dot_count = 1
-						
+
+					# Time Formatting & Sleep Function
 					total_seconds = int(until_release.total_seconds())  # Get total seconds
 					hours, remainder = divmod(total_seconds, 3600)
 					minutes, seconds = divmod(remainder, 60)
@@ -146,5 +153,6 @@ async def countdown(ctx):
 					
 			await msg.delete()
 			break
-		
+
+#Running the Bot
 bot.run('TOKEN')
