@@ -1,6 +1,6 @@
 # Countdown-timer
 
-This is a **Discord bot** that provides a countdown to the release of **Honkai: Star Rail 3.1**. It updates the time remaining in different phases and announces the release when the countdown hits zero.
+This is a **Discord bot** that provides a countdown to the release of **Honkai: Star Rail 3.1**. It updates the time remaining in different phases and announces the release when the countdown hits zero. (you can manually change the date)
 
 ## Features
 ✅ **Live Countdown** – Displays the time left until release
